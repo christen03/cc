@@ -139,6 +139,7 @@ export default function StoryPage() {
               <motion.p
                 key={index}
                 className="text-xl font-[var(--font-caveat)] leading-relaxed mb-2"
+                style={{ fontSize: "1.3rem" }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.4, duration: 0.7 }}
@@ -163,6 +164,7 @@ export default function StoryPage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
+            style={{ fontSize: "1.5rem" }}
           >
             will you be my girlfriend? 💕
           </motion.p>
@@ -179,6 +181,7 @@ export default function StoryPage() {
               style={{
                 fontFamily: "var(--font-caveat)",
                 fontWeight: "700",
+                fontSize: "1.3rem",
                 background: "linear-gradient(135deg, #ff6b9d, #ff8cc8)",
                 boxShadow: "0 4px 15px rgba(255, 107, 157, 0.4)",
               }}
@@ -206,6 +209,7 @@ export default function StoryPage() {
                 fontFamily: "var(--font-caveat)",
                 fontWeight: "700",
                 background: "linear-gradient(135deg, #ffb3ba, #ffc3a8)",
+                fontSize: "1.3rem",
               }}
               whileHover={{
                 scale: 1.05,

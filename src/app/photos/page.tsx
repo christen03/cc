@@ -57,10 +57,12 @@ const generatePhotosWithScreenDimensions = () => {
 
     const x = position.x + randomOffsetX;
     const y = position.y + randomOffsetY;
+    const lowerCase = [4, 6, 9];
+    const extension = lowerCase.includes(id) ? "jpg" : "JPG";
 
     return {
       id,
-      src: `/photos/photo${id}.jpg`,
+      src: `/photos/photo${id}.${extension}`,
       alt: `Memory ${id}`,
       emojis: polaroidEmojiCombos[id % polaroidEmojiCombos.length],
       delay: i * 0.2, // Use index for delay instead of id
@@ -262,6 +264,7 @@ export default function PhotosPage() {
             <motion.p
               key={index}
               className="text-xl font-[var(--font-caveat)] leading-relaxed mb-2"
+              style={{ fontSize: "1.2rem" }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -284,7 +287,7 @@ export default function PhotosPage() {
           boxShadow:
             "0 8px 32px rgba(255, 107, 107, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2)",
           fontFamily: "var(--font-caveat)",
-          fontSize: "16px",
+          fontSize: "1.3rem",
         }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

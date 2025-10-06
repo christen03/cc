@@ -74,6 +74,7 @@ export default function YesPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.8, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
+          style={{ fontSize: "1.3rem" }}
         >
           i promise to make us proud :)
         </motion.p>
